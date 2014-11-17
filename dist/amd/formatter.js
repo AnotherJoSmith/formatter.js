@@ -76,7 +76,7 @@ function Formatter(el, opts) {
   });
 
   // Persistence
-  if (self.opts.persistent) {
+  if (self.opts.persistent || el.value) {
     // Format on start
     self._processKey('', false);
     self.el.blur();
