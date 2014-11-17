@@ -23,7 +23,8 @@ var defaults = {
 var inptRegs = {
   '9': /[0-9]/,
   'a': /[A-Za-z]/,
-  '*': /[A-Za-z0-9]/
+  '?': /[A-Za-z0-9]/,
+  '*': /./
 };
 
 //
@@ -223,6 +224,7 @@ Formatter.prototype._focus = function () {
 //
 Formatter.prototype._processKey = function (chars, delKey, ignoreCaret) {
   // Get current state
+  debugger;
   this.sel = inptSel.get(this.el);
   this.val = this.el.value;
 

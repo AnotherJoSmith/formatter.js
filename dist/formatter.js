@@ -461,7 +461,8 @@ var formatter = function (patternMatcher, inptSel, utils) {
   var inptRegs = {
     '9': /[0-9]/,
     'a': /[A-Za-z]/,
-    '*': /[A-Za-z0-9]/
+    '?': /[A-Za-z0-9]/,
+    '*': /./
   };
   //
   // Class Constructor - Called with new Formatter(el, opts)
@@ -632,6 +633,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
   //
   Formatter.prototype._processKey = function (chars, delKey, ignoreCaret) {
     // Get current state
+    debugger;
     this.sel = inptSel.get(this.el);
     this.val = this.el.value;
     // Init values
